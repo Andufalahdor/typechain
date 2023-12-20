@@ -1,12 +1,19 @@
-// console.log("hello!")
+interface Human {
+    name: string,
+    age: number,
+    gender: string
+}
 
-const name = "Test",
-    age = '28',
-    gender = "male"
+const person = {
+    name: "Test",
+    age: 28,
+    gender: "male"
+}
 
-const sayHi = (name: string, age: number|string, gender: string): string =>
- `Hello ${name} ${age} ${gender}` 
 
-console.log(sayHi(name, age, gender));
+const sayHi = (person: Human): string =>
+ `Hello ${person.name} ${person.age} ${person.gender}` 
+
+console.log(sayHi(person));
 
 export {}
